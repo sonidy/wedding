@@ -139,6 +139,15 @@
             font-size: 0.95em;
             margin-top: 10px;
         }
+        .warning-note {
+            background-color: #ffeaea; /* Very light pink/red background */
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.95em;
+            margin-top: 10px;
+            border: 1px solid #d9534f; /* Subtle red border */
+            color: #d9534f; /* Red text for warning */
+        }
         .app-links {
             margin-top: 10px;
             display: flex;
@@ -212,6 +221,14 @@
             text-align: center;
             color: #888;
             font-style: italic;
+        }
+        .meme-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 40px auto 20px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -319,8 +336,8 @@
         <li>**Drop-Off Address:** <span class="highlight">3 Park Lane, Singapore 798387</span></li>
         <li>**Estimated Time:** 20-40 minutes depending on traffic and starting location.</li>
     </ul>
-    <div class="transport-note">
-        <span class="highlight">Important Note:</span> **Uber is not available in Singapore** as their Southeast Asia operations were acquired by Grab. Please use Grab or Gojek.
+    <div class="warning-note">
+        <span style="font-weight: 700;">Important Note:</span> **Uber is not available in Singapore** as their Southeast Asia operations were acquired by Grab. Please use Grab or Gojek.
     </div>
     <div class="app-links">
         <a href="https://www.grab.com/sg/download/" target="_blank">Download Grab App</a>
@@ -345,7 +362,7 @@
     <p style="text-align: center; margin-top: 15px;">
         <img src="images/parking.jpg" alt="Screenshot of The Oval Parking Map" class="map-screenshot-placeholder" style="max-height: 550px; object-fit: cover;">
         <em style="font-size: 0.9em; display: block; margin-top: 5px;">
-            (Please replace this image with a screenshot of the primary parking area. Right-click the image URL above to save it locally first.)
+            Areas highlighted in light blues are recommended parking spots.
         </em>
     </p>
 
@@ -445,6 +462,8 @@
         </div>
     </div>
 
+    <!-- Meme Image Addition -->
+    <img src="https://i.imgflip.com/acyjtw.jpg" alt="A fun meme about excitement" class="meme-image">
 
     <div style="text-align: center; color: #a07d57; font-size: 2em; margin-top: 30px;">
         &hearts;
