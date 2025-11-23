@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Edison & Juvensia - Singapore</title>
+    
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #fcfcfc; /* Near white background */
+            color: #404040; /* Soft dark grey text for elegance */
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Stronger but softer shadow */
+            border: 1px solid #e9e5e0; /* Subtle border */
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: #a07d57; /* Soft gold/bronze for main title */
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            border-bottom: 1px solid #e9e5e0;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            color: #6a6a6a;
+            font-weight: 700;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #a07d57; /* Soft gold accent */
+            font-size: 1.2em;
+            margin-top: 25px;
+            font-weight: 600;
+        }
+        .highlight {
+            font-weight: 700;
+            color: #a07d57; /* Soft gold accent color */
+        }
+        .address-box {
+            background-color: #f7f3ed; /* Very light gold cream background */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 1.2em;
+            text-align: center;
+            border: 1px solid #e9e5e0;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li:before {
+            content: '◆'; /* Elegant diamond bullet */
+            margin-right: 10px;
+            color: #a07d57;
+            font-size: 0.8em;
+            position: relative;
+            top: -1px;
+        }
+        a {
+            color: #5d5d5d;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        a:hover {
+            color: #a07d57;
+        }
+        .cta-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #a07d57; /* Soft gold button */
+            color: white;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(160, 125, 87, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .cta-link:hover {
+            background-color: #8b6e4e;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+        .date-box {
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 15px;
+            padding: 10px 0;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .icon-header {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        /* Style for the embedded map container */
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #e9e5e0;
+            height: 400px; /* Fixed height for visual consistency */
+            width: 100%;
+        }
+        .map-container iframe {
+            display: block;
+        }
+        .sgac-box {
+            background-color: #f0f6ff;
+            border-left: 5px solid #a07d57;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .transport-note {
+            background-color: #f7f3ed;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.95em;
+            margin-top: 10px;
+        }
+        .app-links {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .app-links a {
+            padding: 8px 15px;
+            background-color: #e9e5e0;
+            border-radius: 5px;
+            font-size: 0.9em;
+            text-decoration: none;
+            color: #404040;
+            transition: background-color 0.2s;
+        }
+        .app-links a:hover {
+            background-color: #a07d57;
+            color: white;
+        }
+        .event-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .event-logo-container a {
+            text-decoration: none; /* Remove underline from the custom logo links */
+            color: inherit; /* Inherit color from the text-logo div */
+        }
+        .event-text-logo {
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1.5em;
+            text-align: center;
+            min-width: 120px; /* Ensure some consistency */
+        }
+        .blackpink-logo {
+            background-color: black;
+            color: hotpink;
+            letter-spacing: 1px;
+        }
+        .afa-logo {
+            background-color: black;
+            color: white;
+            letter-spacing: 1px;
+        }
+        .contact-entry {
+            margin: 10px 0;
+            padding: 5px;
+            border-bottom: 1px dashed #f0f0f0;
+        }
+        .contact-entry:last-child {
+            border-bottom: none;
+        }
+        /* Style for map screenshot placeholder */
+        .map-screenshot-placeholder {
+            width: 100%;
+            max-width: 600px; /* Or a suitable max-width */
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background-color: #f9f9f9; /* Light background for the placeholder */
+            line-height: 200px; /* For vertical centering of text */
+            text-align: center;
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Edison & Juvensia</h1>
+    <p style="text-align: center; font-size: 1.1em; color: #6a6a6a;">A special guide for our wonderful guests traveling to Singapore!</p>
+    
+    <div style="text-align: center; color: #a07d57; font-size: 2em; margin: 10px 0;">
+        &hearts;
+    </div>
+
+    <h2><span class="icon-header">🥂</span> Event Details</h2>
+
+    <div class="date-box">
+        <span class="highlight">Saturday, 29 November 2025</span><br>
+        Reception: <strong>11:30 AM – 2:00 PM</strong>
+    </div>
+
+    <p style="margin-top: 20px;"><span class="highlight">Venue:</span> The Summerhouse (Located in the Seletar Aerospace Park) &mdash; 
+        <a href="https://www.thesummerhouse.sg/" target="_blank">View Venue Website</a>
+    </p>
+    <div class="address-box">
+        <strong>The Summerhouse, 3 Park Lane, Singapore 798387</strong>
+    </div>
+    <p><em>*Note: All times are Singapore Standard Time (SST), UTC+8. Please account for time zone differences when planning your arrival!</em></p>
+
+    <h3>Quick Climate Note:</h3>
+    <p>Singapore in November is tropical (average 28°C / 82°F) and marks the start of the wet season. Sudden, heavy rain showers are common. We recommend bringing a compact <span class="highlight">umbrella ("brolly")</span> for getting around outside of the venue!</p>
+
+    <h3>Quick Map View:</h3>
+    
+
+<div class="map-container">
+        <iframe 
+            src="https://maps.google.com/maps?q=3%20Park%20Lane,%20Singapore%20798387&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    ---
+    
+    <h2><span class="icon-header">🛂</span> Entry & Visa Requirements</h2>
+
+    <p>All foreign visitors must ensure they have the proper documentation and permissions before traveling.</p>
+
+    <ul>
+        <li>**Passport Validity:** Your passport must be valid for at least <span class="highlight">six months</span> from your date of departure from Singapore.</li>
+    </ul>
+
+    <h3>Official Visa Check:</h3>
+    <p>Depending on your nationality, you may require an entry visa. Please use the official Singapore Immigration & Checkpoints Authority (ICA) link below to verify your status well in advance:</p>
+    <p style="text-align: center; margin: 25px 0 10px;">
+        <a href="https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements" target="_blank" class="cta-link">
+            Verify Your Visa Status (ICA Website)
+        </a>
+    </p>
+
+    <div class="sgac-box">
+        <h3>Mandatory: SG Arrival Card (SGAC)</h3>
+        <p>All travelers must submit an electronic arrival card and health declaration. It is **not a visa** and is **free**.</p>
+        <p>
+            <span class="highlight">**Recommendation:**</span> For the smoothest immigration clearance, we advise completing this form **2 days prior** to your arrival in Singapore. It can be submitted up to three days before arrival.
+        </p>
+        <p style="text-align: center; margin-top: 15px;">
+            <a href="https://eservices.ica.gov.sg/sgarrivalcard/" target="_blank">
+                Submit SG Arrival Card Here
+            </a>
+        </p>
+    </div>
+
+    
+
+<h2><span class="icon-header">📱</span> Connectivity: eSIMs / SIM Cards</h2>
+
+    <p>Staying connected with mobile data is essential. We recommend purchasing a Tourist SIM Card or eSIM <span class="highlight">before your arrival</span> for immediate connectivity, or easily purchasing one upon landing at Changi Airport.</p>
+
+    <h3>Recommendation: Singtel hi! Tourist eSIM</h3>
+    <p>If your phone supports eSIM technology, this is the quickest way to get connected without needing a physical card. You can purchase this online in advance:</p>
+    <p style="text-align: center; margin: 25px 0 10px;">
+        <a href="https://www.singtel.com/personal/products-services/mobile/prepaid-plans/buy/hi-tourist-sim-cards/esim/product-detail?product-id=hiapp-esim-12" target="_blank" class="cta-link" style="padding: 8px 15px;">
+            Purchase Singtel hi! Tourist eSIM
+        </a>
+    </p>
+    <p style="text-align: center; font-size: 0.95em; color: #6a6a6a; margin-top: 10px;">
+        <span class="highlight">On-Arrival Purchase:</span> You can also easily purchase physical SIM cards or eSIMs from the many **money exchanges or mobile provider booths** found within Changi Airport.
+    </p>
+
+    ---
+
+    <h2><span class="icon-header">🗺️</span> Getting To The Summerhouse</h2>
+
+    <p>Due to the venue's location (Seletar Aerospace Park), we strongly recommend using a car service for convenience and speed.</p>
+
+    <h3>1. Ride-Sharing Services</h3>
+    <ul>
+        <li>**Apps:** Download **Grab** or **Gojek** (Singapore's popular ride-hailing apps).</li>
+        <li>**Drop-Off Address:** <span class="highlight">3 Park Lane, Singapore 798387</span></li>
+        <li>**Estimated Time:** 20-40 minutes depending on traffic and starting location.</li>
+    </ul>
+    <div class="transport-note">
+        <span class="highlight">Important Note:</span> **Uber is not available in Singapore** as their Southeast Asia operations were acquired by Grab. Please use Grab or Gojek.
+    </div>
+    <div class="app-links">
+        <a href="https://www.grab.com/sg/download/" target="_blank">Download Grab App</a>
+        <a href="https://www.gojek.com/app" target="_blank">Download Gojek App</a>
+    </div>
+
+    <h3>2. Public Transport (Less Direct)</h3>
+    <p>You can reach the area via Bus 103 or 117 from major MRT interchanges (like Punggol or Yishun). Alight at **'The Oval'** bus stop, which is a short walk to the venue.</p>
+    <div class="transport-note">
+        <span class="highlight">Quick Travel Tip:</span> We highly recommend using <a href="https://www.google.com/maps" target="_blank">Google Maps</a> on your phone to plan your specific public transport route!
+    </div>
+    <div class="transport-note">
+        <span class="highlight">Payment Convenience:</span> For all buses and trains (MRT/LRT), you can simply use your contactless **Mastercard** or **Visa** credit/debit card. There is no need to purchase a separate travel card.
+    </div>
+    <div class="transport-note">
+        <span class="highlight">Alternative Payment:</span> **EZ-Link cards** (Singapore's reusable public transport card) are also available for purchase at any MRT station if preferred.
+    </div>
+    
+    <h3>3. Driving In & Parking</h3>
+    <p>If you prefer to drive, public parking is available around The Oval @ Seletar Aerospace Park. Please note parking is generally charged hourly.</p>
+    
+    <p style="text-align: center; margin-top: 15px;">
+        <img src="images/parking.jpg" alt="Screenshot of The Oval Parking Map" class="map-screenshot-placeholder" style="max-height: 550px; object-fit: cover;">
+        <em style="font-size: 0.9em; display: block; margin-top: 5px;">
+            (Please replace this image with a screenshot of the primary parking area. Right-click the image URL above to save it locally first.)
+        </em>
+    </p>
+
+    <ul>
+        <li>**Primary Parking Area (The Oval):** This lot is closest to the venue.
+            <a href="https://maps.google.com/?cid=18252665155273412370" target="_blank">(View on Map)</a>
+        </li>
+        <li>**Supplementary Parking Option:** Another nearby public carpark.
+            <a href="https://www.google.com/maps?cid=16777827184143282361" target="_blank">(View on Map)</a>
+        </li>
+        <li>**Additional Nearby Lots (Short Links):** You may also find parking at these locations:
+            <a href="https://maps.app.goo.gl/ToCEmGGWVbwbazPk7" target="_blank">Lot A</a> and 
+            <a href="https://maps.app.goo.gl/dMRMM4j6eNhk1f1r9" target="_blank">Lot B</a>.
+        </li>
+        <li><span class="highlight">Important:</span> Please allow extra time on weekends as parking capacity may be limited in the area.</li>
+    </ul>
+
+
+    ---
+
+    <h2><span class="icon-header">💵</span> Currency & Payment</h2>
+
+    <p>The local currency is the **Singapore Dollar (SGD)**. Exchange counters and ATMs are widely available at Changi Airport and in all major shopping centers.</p>
+
+    <ul>
+        <li>**Card Usage:** Contactless payment using **Mastercard, Visa, and PayWave** is largely supported everywhere, including most restaurants, major retail, and supermarkets.</li>
+        <li>**Cash Advisory:** While Singapore is very digital, cash remains necessary in certain areas, particularly at local **hawker centers** and smaller **heartland shops**. We recommend keeping S$50–S$100 in cash for these spots.</li>
+    </ul>
+    
+    ---
+    
+    <h2><span class="icon-header">📞</span> Emergency Contacts</h2>
+
+    <p>In the event of an emergency during your stay, please use the following contacts:</p>
+    
+    <div class="contact-entry">
+        <strong>Ambulance / Fire:</strong> <span class="highlight">995</span>
+    </div>
+    <div class="contact-entry">
+        <strong>Police:</strong> <span class="highlight">999</span>
+    </div>
+    <div class="contact-entry">
+        <strong>Edison (Groom):</strong> <a href="tel:+6583289124" class="highlight" style="text-decoration: none;">+65 8328 9124</a>
+        <p style="font-size: 0.9em; margin: 5px 0 0; color: #6a6a6a;">Please call Edison directly for urgent, non-life-threatening matters.</p>
+    </div>
+
+    ---
+    
+    <h2><span class="icon-header">✨</span> Local Recommendations & Things to Do</h2>
+
+    <p>Singapore is a vibrant city with endless activities! Here are a few recommendations for enjoying your time before or after the wedding.</p>
+    
+    <h3>Food & Nightlife</h3>
+    <p style="font-style: italic; font-weight: 600; color: #a07d57; margin-top: 15px;">
+        In Singapore, we are truly passionate about food! Make sure to dedicate time to trying our famous local cuisine.
+    </p>
+    <ul>
+        <li><span class="highlight">Iconic Hawker Centres:</span> Experience Singapore's food culture at **Newton Food Centre** and **Lau Pa Sat** for affordable, delicious local dishes.</li>
+        <li><span class="highlight">Local Delights (Durian):</span> For the adventurous, try the "King of Fruits"! Visit **Durian stalls** in Geylang or recommended spots for a true Singaporean experience.</li>
+        <li><span class="highlight">Springleaf Prata:</span> Visit a local chain like **Springleaf Prata** for delicious prata (Indian flatbread), a local favorite for breakfast or a late-night snack.</li>
+        <li><span class="highlight">Clarke Quay:</span> The main riverfront area known for its bustling bars, restaurants, and nightlife scene.</li>
+    </ul>
+
+    <h3>Iconic Attractions & Family Fun</h3>
+    <ul>
+        <li><span class="highlight">Gardens by the Bay:</span> Visit the Cloud Forest and Flower Dome, and catch the spectacular light show at the Supertree Grove.</li>
+        <li><span class="highlight">Sentosa Island:</span> Home to **Universal Studios Singapore**, S.E.A. Aquarium (Oceanarium), and beautiful beaches.</li>
+        <li><span class="highlight">Wildlife Parks:</span> Spend a day at the renowned **Singapore Zoo** and the unique **Night Safari** for an evening adventure.</li>
+    </ul>
+
+    <h3>Shopping & City Exploration</h3>
+    <ul>
+        <li><span class="highlight">Orchard Road:</span> Singapore's famous shopping belt for luxury and major brands.</li>
+        <li><span class="highlight">Bugis Junction / Plaza Singapura:</span> Great spots for accessible shopping and quick dining.</li>
+    </ul>
+
+    <h3>Nature & Outdoors</h3>
+    <ul>
+        <li><span class="highlight">MacRitchie Reservoir:</span> Enjoy scenic boardwalks and the famous TreeTop Walk (check for operating status).</li>
+        <li><span class="highlight">Pulau Ubin:</span> Take a ferry to this rustic island for a glimpse of Singapore's past and cycling trails.</li>
+    </ul>
+    
+    <h3>Upcoming Events & Festivals</h3>
+    <p>If you're extending your stay, you might catch one of Singapore's exciting events. Please check official event websites for specific dates and ticket information:</p>
+    <div class="event-logo-container">
+        <div>
+            <a href="https://www.livenation.sg/blackpink-tickets-adp1239361" target="_blank" style="text-decoration: none;">
+                <div class="event-text-logo blackpink-logo">BLACKPINK</div>
+            </a>
+            <p style="text-align: center; font-size: 0.9em; margin-top: 5px;">Concerts</p>
+        </div>
+        <div>
+            <a href="https://animefestival.asia/afasg25/" target="_blank" style="text-decoration: none;">
+                <div class="event-text-logo afa-logo">AFA SG 2025</div>
+            </a>
+            <p style="text-align: center; font-size: 0.9em; margin-top: 5px;">Anime Festival Asia</p>
+        </div>
+    </div>
+
+
+    <div style="text-align: center; color: #a07d57; font-size: 2em; margin-top: 30px;">
+        &hearts;
+    </div>
+
+</div>
+
+</body>
+</html>
